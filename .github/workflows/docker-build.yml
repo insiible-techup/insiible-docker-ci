@@ -35,7 +35,7 @@ jobs:
 
             - name: docker build and push
               run: |
-                   docker build -t ${{ secrets.DOCKERHUB_USERNAME }}/$IMAGE_NAME:$TAG
+                   docker build -t ${{ secrets.DOCKERHUB_USERNAME }}/$IMAGE_NAME:$TAG .
                    docker push ${{ secrets.DOCKERHUB_USERNAME }}/$IMAGE_NAME:$TAG
 
                    
